@@ -1,0 +1,85 @@
+-Data Source:
+
+http://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+
+-The descriptive labels for varaibles in both test and train datatset are obtained from the following file:
+	./UCI HAR Dataset/features.txt
+
+--Activity descriptions are obtained from the following file:
+	./UCI HAR Dataset/activity_labels.txt
+
+################Test and Train Data################################
+
+
+The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
+
+Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals (tBodyAccJerk-XYZ and tBodyGyroJerk-XYZ). Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm (tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyroJerkMag). 
+
+Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. (Note the 'f' to indicate frequency domain signals). 
+
+These signals were used to estimate variables of the feature vector for each pattern:  
+'-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
+
+tBodyAcc-XYZ
+tGravityAcc-XYZ
+tBodyAccJerk-XYZ
+tBodyGyro-XYZ
+tBodyGyroJerk-XYZ
+tBodyAccMag
+tGravityAccMag
+tBodyAccJerkMag
+tBodyGyroMag
+tBodyGyroJerkMag
+fBodyAcc-XYZ
+fBodyAccJerk-XYZ
+fBodyGyro-XYZ
+fBodyAccMag
+fBodyAccJerkMag
+fBodyGyroMag
+fBodyGyroJerkMag
+
+Additional vectors obtained by averaging the signals in a signal window sample. These are used on the angle() variable:
+
+gravityMean
+tBodyAccMean
+tBodyAccJerkMean
+tBodyGyroMean
+tBodyGyroJerkMean
+
+################Test Data##########################################
+
+-"subject_ID" for test dataset is obtain from the following file:
+	./UCI HAR Dataset/test/subject_test.txt
+
+-activity code for the test dataset is obtained from the following:
+	./UCI HAR Dataset/test/y_test.txt
+
+-the raw test dataset is obtained from the following:
+	./UCI HAR Dataset/test/x_test.txt
+-the lable of variables in the test dataset is re-named used the descriptive lable mentioned above
+
+-subject_ID and activity code are added to the test dataset
+
+################Test Data##########################################
+
+-"subject_ID" for train dataset is obtain from the following file:
+	./UCI HAR Dataset/train/subject_train.txt
+
+-activity code for the train dataset is obtained from the following:
+	./UCI HAR Dataset/train/y_train.txt
+
+-the raw train dataset is obtained from the following:
+	./UCI HAR Dataset/train/x_train.txt
+
+-the lable of variables in the train dataset is re-named used the descriptive lable mentioned above
+
+-subject_ID and activity code are added to the train dataset
+
+################Merged data##########################################
+-The test and train datasets are merged together
+
+-Only columns representing mean and std for each measurement are included
+
+- Descriptive activity names is added to the refined dataset by using the activity description file mentioned above
+
+- Delete the activity code
